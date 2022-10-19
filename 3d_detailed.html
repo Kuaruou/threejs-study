@@ -1,5 +1,17 @@
-<?php $this->load->view($_header);?>
-<?php $this->load->view($_company_header);?>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="threed-detailed-container">
+    <img src="/assets/images/gltf/nissan_rocket/scene.gltf" alt="">
+    </div>
+</body>
+</html>
+
 <style>
     .en-show, .zh-tw-show{
         display: none;
@@ -12,12 +24,6 @@
     }
 </style>
 <!-- ------------------------------------------------------------------------ -->
-<div class="threed-detailed-container">
-    
-</div>
-<!-- ------------------------------------------------------------------------ -->
-<?php $this->load->view($_footer);?>
-<!-- ------------------------------------------------------------------------ -->
 <style>
     body{
         background:#000;
@@ -26,6 +32,10 @@
     }
 </style>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.145.0/three.min.js"></script>
+<script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+<!-- 注意GLTFLoader版本要和three.js對應 -->
+<script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r145/examples/js/loaders/GLTFLoader.js"></script>
 <script>
     let scene, camera, renderer;
 
@@ -45,14 +55,14 @@
         // nz = back
 
         scene.background = new THREE.CubeTextureLoader()
-        .setPath( '/assets/images/skybox/calm_sea/' )
+        .setPath( '/assets/images/skybox/moon/' )
         .load( [
-            'calm_sea_ft.jpg',
-            'calm_sea_bk.jpg',
-            'calm_sea_up.jpg',
-            'calm_sea_dn.jpg',
-            'calm_sea_rt.jpg',
-            'calm_sea_lf.jpg'
+            'sleepyhollow_ft.jpg',
+            'sleepyhollow_bk.jpg',
+            'sleepyhollow_up.jpg',
+            'sleepyhollow_dn.jpg',
+            'sleepyhollow_rt.jpg',
+            'sleepyhollow_lf.jpg'
         ] )
 
         camera = new THREE.PerspectiveCamera(
@@ -122,7 +132,7 @@
         let loader = new THREE.GLTFLoader()
         // loader.load('/assets/images/gltf/tow_boat/scene.gltf', function(gltf){
         // loader.load('/assets/images/gltf/ramona/scene.gltf', function(gltf){
-        loader.load('/assets/images/gltf/nissanf/scene.gltf', function(gltf){
+        loader.load('/assets/images/gltf/nissan_rocket/scene.gltf', function(gltf){
             console.log('gltf', gltf)
             model = gltf.scene.children[0]
 
