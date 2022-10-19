@@ -61,8 +61,7 @@
         // nz = back
 
         scene.background = new THREE.CubeTextureLoader()
-        .setPath( 'https://github.com/Kuaruou/threejs-study/blob/main/assets/images/skybox/moon' )
-        // .setPath( '/assets/images/skybox/moon/' )
+        .setPath( './assets/images/skybox/moon/' )
         .load( [
             'sleepyhollow_ft.JPG',
             'sleepyhollow_bk.JPG',
@@ -139,8 +138,7 @@
         let loader = new THREE.GLTFLoader()
         // loader.load('/assets/images/gltf/tow_boat/scene.gltf', function(gltf){
         // loader.load('/assets/images/gltf/ramona/scene.gltf', function(gltf){
-        loader.load('https://github.com/Kuaruou/threejs-study/blob/main/assets/images/gltf/nissan_rocket/scene.gltf', function(gltf){
-        // loader.load('/assets/images/gltf/nissan_rocket/scene.GLTF', function(gltf){
+        loader.load('./assets/images/gltf/nissan_rocket/scene.GLTF', function(gltf){
             console.log('gltf', gltf)
             model = gltf.scene.children[0]
 
