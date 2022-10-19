@@ -1,6 +1,7 @@
 # Threejs-study
 
 ### [[網站連結]](https://kuaruou.github.io/threejs-study/) ###
+![image](https://github.com/Kuaruou/threejs-study/blob/main/assets/images/demo.png)
 
 *簡略說明
 
