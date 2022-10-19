@@ -63,12 +63,12 @@
         scene.background = new THREE.CubeTextureLoader()
         .setPath( './assets/images/skybox/moon/' )
         .load( [
-            'sleepyhollow_ft.JPG',
-            'sleepyhollow_bk.JPG',
-            'sleepyhollow_up.JPG',
-            'sleepyhollow_dn.JPG',
-            'sleepyhollow_rt.JPG',
-            'sleepyhollow_lf.JPG'
+            'sleepyhollow_ft.jpg',
+            'sleepyhollow_bk.jpg',
+            'sleepyhollow_up.jpg',
+            'sleepyhollow_dn.jpg',
+            'sleepyhollow_rt.jpg',
+            'sleepyhollow_lf.jpg'
         ] )
 
         camera = new THREE.PerspectiveCamera(
@@ -138,7 +138,7 @@
         let loader = new THREE.GLTFLoader()
         // loader.load('/assets/images/gltf/tow_boat/scene.gltf', function(gltf){
         // loader.load('/assets/images/gltf/ramona/scene.gltf', function(gltf){
-        loader.load('./assets/images/gltf/nissan_rocket/scene.GLTF', function(gltf){
+        loader.load('./assets/images/gltf/nissan_rocket/scene.gltf', function(gltf){
             console.log('gltf', gltf)
             model = gltf.scene.children[0]
 
