@@ -15,3 +15,5 @@
   <code>OrbitControls</code>
   <code>GLTFLoader</code>
 </p>
+
+*頁面部屬提示: 圖片路徑要為 ./ 開頭而不能為 / 開頭。 
